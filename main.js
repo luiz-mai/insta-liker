@@ -38,8 +38,8 @@ const puppeteer = require('puppeteer');
     let counter = 0
 
     for(counter = 0; counter < photosToLike; counter++){
-        await page.waitFor("span[aria-label=Curtir]")
-        await page.click("span[aria-label=Curtir]")
+        await page.waitFor("article button span")
+        await page.click("article button span")
         await page.waitFor(500)
         await page.waitFor(".coreSpriteRightPaginationArrow")
         await page.click(".coreSpriteRightPaginationArrow")
