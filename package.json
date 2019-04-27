@@ -1,0 +1,24 @@
+{
+  "name": "insta-liker",
+  "version": "1.0.0",
+  "description": "📸❤️ Bot used to like most recent photos on Instagram's Explore periodically.",
+  "main": "main.js",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "puppeteer": "^1.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiz-mai/insta-liker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiz-mai/insta-liker/issues"
+  },
+  "homepage": "https://github.com/luiz-mai/insta-liker#readme"
+}

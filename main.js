@@ -1,8 +1,10 @@
+require('dotenv').config()
 const puppeteer = require('puppeteer');
 
+
 (async () => {
-    const email = "xxx"
-    const password = "xxx"
+    const email = process.env.FACEBOOK_EMAIL
+    const password = process.env.FACEBOOK_PASSWORD
     const browser = await puppeteer.launch({ headless: false });
     //   const browser = await puppeteer.launch();
     const page = await browser.newPage();
