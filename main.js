@@ -11,8 +11,8 @@ const puppeteer = require('puppeteer');
     const instagramExploreURL = "https://instagram.com/explore"
     const instagramTagURL = "https://www.instagram.com/explore/tags/{tag}"
 
-    const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-    //   const browser = await puppeteer.launch();
+    // const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+      const browser = await puppeteer.launch( {headless: false});
     const page = await browser.newPage();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3419.0 Safari/537.36');
     await page.goto(instagramHomeURL);
@@ -46,5 +46,6 @@ const puppeteer = require('puppeteer');
         await page.click(".coreSpriteRightPaginationArrow")
     }
 
+    await page.close()
     await browser.close();
 })();
