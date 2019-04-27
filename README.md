@@ -52,6 +52,12 @@ $ heroku create your_app_name
 $ git push heroku master
 ```
 
+Puppeteer raises an error due to missing dependencies when running on Heroku, so you should set a buildpack that allows Heroku to install those dependencies, I suggest using [this one](https://github.com/jontewks/puppeteer-heroku-buildpack), so simply run the command bellow and redeploy your application using `git push heroku master`.
+
+```bash
+$ heroku buildpacks:set jontewks/puppeteer
+```
+
 If you want to setup and scheduler, then run:
 
 ```bash
