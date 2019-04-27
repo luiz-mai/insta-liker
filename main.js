@@ -1,7 +1,6 @@
 require('dotenv').config()
 const puppeteer = require('puppeteer');
 
-
 (async () => {
     const email = process.env.FACEBOOK_EMAIL
     const password = process.env.FACEBOOK_PASSWORD
@@ -12,7 +11,7 @@ const puppeteer = require('puppeteer');
     const instagramExploreURL = "https://instagram.com/explore"
     const instagramTagURL = "https://www.instagram.com/explore/tags/{tag}"
 
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch();
     //   const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(instagramHomeURL);
